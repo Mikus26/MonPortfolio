@@ -26,9 +26,9 @@ Areal Alien ❥ 雷克斯
   --heading-medium: 3.6rem;
   --heading-small: 2.4rem;
   --paragraph: 1.11rem;
-  --navbar-buttons: 2.4rem;
+
   /* misc */
-  --transition-main: .175, .685, .32;
+  --transition-main: 0.175, 0.685, 0.32;
   /* Fonts */
   --font-main: "Poppins";
 }
@@ -41,10 +41,13 @@ Areal Alien ❥ 雷克斯
   Global Styles
  =============== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
-html, body {
+html,
+body {
   margin: 0;
   width: 100%;
   color: hsl(var(--text-primary));
@@ -59,33 +62,37 @@ html, body {
  ============ */
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 /* Font Size */
-h1 {
-  font-size: var(--heading-large);
-}
-h2 {
-  font-size: var(--heading-medium);
-}
+
+
 h3 {
   font-size: var(--heading-small);
 }
 h4 {
-  font-size: calc(var(--heading-small) - .2rem);
+  font-size: calc(var(--heading-small) - 0.2rem);
 }
 h5 {
-  font-size: calc(var(--heading-small) - .4rem);
+  font-size: calc(var(--heading-small) - 0.4rem);
 }
 h6 {
-  font-size: calc(var(--heading-small) - .6rem);
+  font-size: calc(var(--heading-small) - 0.6rem);
 }
 /* Font Weight */
-h1, h2 {
+h1,
+h2 {
   font-weight: 900;
 }
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
   font-weight: 800;
 }
 /* Paragraphs */
@@ -100,80 +107,50 @@ a {
   text-decoration: underline;
 }
 a:visited {
-  color: hsla(var(--primary), .5);
+  color: hsla(var(--primary), 0.5);
 }
 
-/* =========
-  Buttons
- ========= */
-
-button {
-  padding: .8em 1.2em;
-  border: 1px solid hsl(var(--black));
-  background-color: hsl(var(--background));
-  font-size: var(--paragraph);
-  cursor: pointer;
-  outline: none;
-}
-button:focus {
-  box-shadow:
-          0 0 0 2px hsl(var(--black)),
-          0 0 0 3px hsl(var(--white));
-  border: 1px solid transparent;
-}
-
-/* =======
-  Lists
- ======= */
-
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
 }
 
 /* =======
   Forms
  ======= */
-
-img
- {
-    height: 75px;
-    margin-left: 10px;
- }
+.mw {
+  height: 75px;
+  margin-left: 10px;
+}
 
 form {
   margin: 0;
 }
 fieldset {
   margin: 0;
-  padding: .5em 0;
+  padding: 0.5em 0;
   border: none;
 }
 input {
-  padding: .8em 1.2em;
+  padding: 0.8em 1.2em;
   font-size: var(--paragraph);
-  background-color: hsl(var(--grooble));
-  border: 2px solid hsl(var(--grooble));
+  background-color: rgb(0, 0, 0);
+  border: rgb(24, 0, 96) solid 3px;
   outline: none;
+  color: white;
+  border-radius: 15px;
 }
 textarea {
-  padding: .8em 1.2em;
+  padding: 0.8em 1.2em;
   font-size: var(--paragraph);
   font-family: var(--font-main);
-  background-color: hsl(var(--grooble));
-  border: 2px solid hsl(var(--grooble));
+  background-color: white;
+  border: white solid 3px;
   outline: none;
 }
-input, textarea {
-  transition: all .2s ease-in-out;
-}
-input:hover, input:focus, textarea:hover, textarea:focus {
-  box-shadow:
-          0 0 0 2px hsl(var(--black)),
-          0 0 0 3px hsl(var(--white));
-  border: 2px solid transparent;
-}
+
 select {
-  padding: .8em 1.2em;
+  padding: 0.8em 1.2em;
   border: 1px solid hsl(var(--black));
   font-size: var(--paragraph);
   outline: none;
@@ -263,7 +240,7 @@ select {
   height: 100vh;
   position: fixed;
   background-color: rgb(255, 255, 255);
-  transition: width .35s cubic-bezier(var(--transition-main), 1);
+  transition: width 0.35s cubic-bezier(var(--transition-main), 1);
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -297,7 +274,6 @@ select {
 }
 .navbar-logo > .navbar-item-inner:hover {
   background-color: transparent;
-
 }
 .navbar-logo > .navbar-item-inner > svg {
   height: 2em;
@@ -305,7 +281,7 @@ select {
 }
 /* Navbar Items */
 .navbar-item {
-  padding: 0 .5em;
+  padding: 0 0.5em;
   width: 100%;
   cursor: pointer;
 }
@@ -314,14 +290,14 @@ select {
   width: 100%;
   position: relative;
   color: hsl(var(--quite-gray));
-  border-radius: .25em;
+  border-radius: 0.25em;
   text-decoration: none;
-  transition: all .2s cubic-bezier(var(--transition-main), 1);
+  transition: all 0.2s cubic-bezier(var(--transition-main), 1);
 }
 .navbar-item-inner:hover {
   color: hsl(var(--white));
-  background:rgb(0, 200, 255);
-  box-shadow: 0 17px 30px -10px hsla(var(--black), .25);
+  background: rgb(0, 200, 255);
+  box-shadow: 0 17px 30px -10px hsla(var(--black), 0.25);
 }
 .navbar-item-inner-icon-wrapper {
   width: calc(5rem - 1em - 8px);
@@ -329,14 +305,14 @@ select {
 }
 .navbar-item-inner-icon-wrapper ion-icon {
   position: absolute;
-  font-size: calc(var(--navbar-buttons) - 1rem);
+  font-size: 1rem;
 }
 .link-text {
   margin: 0;
   width: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transition: all .35s cubic-bezier(var(--transition-main), 1);
+  transition: all 0.35s cubic-bezier(var(--transition-main), 1);
   overflow: hidden;
   opacity: 0;
   color: rgb(0, 0, 0);
@@ -371,7 +347,7 @@ select {
 /* Selection */
 ::selection {
   color: rgb(255, 255, 255);
-  background:rgba(255, 1, 234, 0.679);
+  background: rgba(255, 1, 234, 0.679);
 }
 /* Scrollbar */
 ::-webkit-scrollbar-track {
@@ -395,57 +371,55 @@ select {
 
 @media only screen and (max-width: 1660px) {
   :root {
-      /* Sizes */
-      --heading-large: 5.4rem;
-      --heading-medium: 3.4rem;
-      --heading-small: 2.2rem;
+    /* Sizes */
+    --heading-large: 5.4rem;
+    --heading-medium: 3.4rem;
+    --heading-small: 2.2rem;
   }
 }
 @media only screen and (max-width: 1456px) {
   :root {
-      /* Sizes */
-      --heading-large: 5.2rem;
-      --heading-medium: 3.2rem;
-      --heading-small: 2rem;
+    /* Sizes */
+    --heading-large: 5.2rem;
+    --heading-medium: 3.2rem;
+    --heading-small: 2rem;
   }
   .view-width {
-      width: 80%;
+    width: 80%;
   }
 }
 @media only screen and (max-width: 1220px) {
   .view-width {
-      width: 70%;
+    width: 70%;
   }
 }
 @media only screen and (max-width: 1024px) {
   :root {
-      /* Sizes */
-      --heading-large: 5rem;
-      --heading-medium: 3rem;
-      --heading-small: 1.8rem;
+    /* Sizes */
+    --heading-large: 5rem;
+    --heading-medium: 3rem;
+    --heading-small: 1.8rem;
   }
   .view-width {
-      width: 75%;
+    width: 75%;
   }
 }
 @media only screen and (max-width: 756px) {
   :root {
-      /* Sizes */
-      --heading-large: 4rem;
-      --heading-medium: 2.6rem;
-      --heading-small: 1.6rem;
-      --paragraph: 1rem;
-      --navbar-buttons: 2.2rem;
+    /* Sizes */
+    --heading-large: 4rem;
+    --heading-medium: 2.6rem;
+    --heading-small: 1.6rem;
+    --paragraph: 1rem;
   }
   .view-width {
-      width: calc(100% - 5em);
+    width: calc(100% - 5em);
   }
 }
 @media only screen and (max-width: 576px) {
   .view-width {
-      width: calc(100% - 3em);
+    width: calc(100% - 3em);
   }
 }
 @media only screen and (max-width: 496px) {
-
 }

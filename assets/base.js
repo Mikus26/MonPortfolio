@@ -5,3 +5,4 @@ import "./img/adobexdd.png";
 import "./img/css33.png";
 import "./img/html55.png";
 import "./img/symf.png";
+import "./img/dev.png";
